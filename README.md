@@ -58,7 +58,7 @@ It is a folder with many parquet files, which are normally just added, and a tra
 
 ### What is predicate pushdown?
 
-You want to load less data into RAM memory while doing so,me transformation; therefore you want to push down your filters and selections to the file reader. You can imagine that arrow is file reader in that situation and what you want is to give to that reader as much information what you need in order to skip loading into memory. This is possible because of the parquet file specific metadata representation which allows the reader to skip not needed data. This is called a zone map.
+You want to load less data into RAM memory while doing some transformation; therefore you want to push down your filters and selections to the file reader. You can imagine that arrow is file reader in that situation and what you want is to give to that reader as much information what you need in order to skip loading into memory. This is possible because of the parquet file specific metadata representation which allows the reader to skip not needed data. This is called a zone map.
 
 ### How delta-rs works?
 
